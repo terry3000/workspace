@@ -1,0 +1,54 @@
+<html>
+//表格行变色
+
+<body>
+
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新</th>
+                <th>累计</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>000666</td>
+                <td>农业银行</td>
+                <td>333</td>
+                <td>666</td>
+            </tr>
+            <tr>
+                <td>000999</td>
+                <td>五粮液</td>
+                <td>888</td>
+                <td>1234</td>
+            </tr>
+        </tbody>
+
+
+    </table>
+
+
+ 
+    <script>
+        var trs =document.querySelector('tbody').querySelectorAll('tr')
+        for(var i=0;i<trs.length;i++){
+
+            trs[i].onmouseover=function(){
+                this.className= 'bg';
+                alert("123");
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

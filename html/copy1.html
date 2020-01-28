@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ClipBoard.js使用</title>
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+</head>
+<body>
+
+
+<div id="aaa"><a href="http://www.w3school.com.cn">W3School</a></div>
+
+
+<button id="copy" data-clipboard-target="#aaa">复制input框中的内容</button>
+
+
+<script type="text/javascript">
+    var clipboard = new ClipboardJS('#copy')
+    // 显示用户反馈/捕获复制/剪切操作后选择的内容
+    clipboard.on('success', function (e) {
+        console.info('Action:', e.action)//触发的动作/如：copy,cut等
+        console.info('Text:', e.text);//触发的文本
+        console.info('Trigger:', e.trigger);//触发的DOm元素
+        e.clearSelection();//清除选中样式（蓝色）
+    })
+    clipboard.on('error', function (e) {
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+    });
+</script>
+
+
+
+
+</body>
+</html>
