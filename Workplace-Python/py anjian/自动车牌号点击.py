@@ -1,3 +1,4 @@
+#自动车牌号点击
 import pyautogui
 
 #定义字母
