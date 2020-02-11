@@ -1,16 +1,24 @@
-
 import requests
+from bs4 import BeautifulSoup
 
-def getHTMLText(url):
-    try:
-        r.requests.get(url)
-        r.raise_for_status()
-        r.encoding = r.apparent_encoding
-        print(r.text)
-        return r.text
-    except:
-        return "产生异常"
+# url="http://1soccer.com/odds/detail/id/1122653"
+url="http://1soccer.com/Gameschedule/score/type/fb/gametime/over/"
 
-if __name__ == "__main__":
-   url = "http://1soccer.com/Gameschedule/score/type/fb/gametime/over/"
-   getHTMLText(url)
+
+r = requests.get(url)
+r.encoding = r.apparent_encoding
+
+
+demo = r.text
+soup = BeautifulSoup(demo, "html.parser")  # 给出解析器
+
+
+# print(soup.prettify())
+
+print(soup.title)
+# print(soup.a)
+# print(soup.a.name)
+# print(soup.a.parent.parent.name)
+
+# tag = soup.a
+# print(tag.attrs)    #属性
