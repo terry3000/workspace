@@ -1,3 +1,3 @@
 import os
 
-os.startfile(r'C:\Users\hyt\Desktop\1.jpg')
+os.startfile(r'C:\Users\cc\Desktop\1.txt')
