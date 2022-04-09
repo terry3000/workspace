@@ -33,7 +33,7 @@ def btn():
     pyautogui.PAUSE = 0.5
     pyautogui.hotkey('tab')
     pyautogui.PAUSE = 0.5
-    pyautogui.press(['1', '2', '3','4','5','6','h','y','t'])
+    pyautogui.press(['1', '2', '3','4','5','6'])
     pyautogui.PAUSE = 0.5
     pyautogui.hotkey('enter')
 
